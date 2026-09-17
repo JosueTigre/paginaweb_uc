@@ -29,82 +29,82 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 3rem 1.5rem;
+      padding: 2.5rem 1rem;
       position: relative;
-      overflow-x: auto; /* Permite scroll horizontal si la pantalla es menor a los cuadros */
+      overflow-x: hidden;
     }
 
     /* Decoraciones visuales de fondo */
     .glow-1 {
       position: absolute;
-      top: -150px;
-      left: -150px;
-      width: 500px;
-      height: 500px;
+      top: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(circle, rgba(88, 166, 255, 0.25), transparent 70%);
       border-radius: 50%;
-      filter: blur(80px);
+      filter: blur(70px);
       z-index: 0;
     }
 
     .glow-2 {
       position: absolute;
-      bottom: -150px;
-      right: -150px;
-      width: 500px;
-      height: 500px;
+      bottom: -100px;
+      right: -100px;
+      width: 420px;
+      height: 420px;
       background: radial-gradient(circle, rgba(188, 140, 255, 0.2), transparent 70%);
       border-radius: 50%;
-      filter: blur(80px);
+      filter: blur(70px);
       z-index: 0;
     }
 
-    /* Contenedor adaptado para albergar dos bloques de 1000px */
+    /* Contenedor principal que aloja cómodamente los dos bloques */
     .container {
       position: relative;
       z-index: 1;
-      max-width: 2250px;
-      width: fit-content;
+      max-width: 1250px;
+      width: 100%;
       background: var(--card-bg);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 3.5rem;
-      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
     }
 
     header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     .badge {
       display: inline-block;
-      padding: 0.6rem 1.6rem;
+      padding: 0.5rem 1.4rem;
       background: rgba(88, 166, 255, 0.12);
       color: var(--accent);
       border: 1px solid rgba(88, 166, 255, 0.3);
       border-radius: 50px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 3rem;
+      gap: 2.5rem;
     }
 
-    /* Cuadro con dimensiones exactas de 1000x1000 px */
+    /* Cuadros cuadrados de 520x520 px */
     .card {
-      width: 1000px;
-      height: 1000px;
+      width: 520px;
+      height: 520px;
       background: rgba(13, 17, 23, 0.7);
       border: 1px solid var(--border);
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -112,15 +112,15 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       border-color: var(--accent);
-      box-shadow: 0 16px 36px rgba(88, 166, 255, 0.2);
+      box-shadow: 0 14px 30px rgba(88, 166, 255, 0.18);
     }
 
-    /* Ocupa todo el espacio menos el texto */
+    /* Foto proporcional dentro del cuadro */
     .image-wrapper {
       width: 100%;
-      height: 880px;
+      height: 440px;
       overflow: hidden;
       background: #161b22;
     }
@@ -134,23 +134,24 @@
     }
 
     .card:hover .image-wrapper img {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
-    /* Barra inferior con el título (120px) para completar los 1000px exactos */
+    /* Pie de la tarjeta (80px) para completar los 520px exactos */
     .card-content {
-      height: 120px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      padding: 0.8rem;
       background: rgba(13, 17, 23, 0.95);
       border-top: 1px solid var(--border);
     }
 
     .card-content h3 {
       color: var(--text-bright);
-      font-size: 2rem;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -165,7 +166,7 @@
     </header>
 
     <div class="gallery">
-      <!-- Tarjeta 1 (1000x1000) -->
+      <!-- Tarjeta 1 (520x520) -->
       <div class="card">
         <div class="image-wrapper">
           <img src="img/foto1.jpg" alt="Iphone 11">
@@ -175,7 +176,7 @@
         </div>
       </div>
 
-      <!-- Tarjeta 2 (1000x1000) -->
+      <!-- Tarjeta 2 (520x520) -->
       <div class="card">
         <div class="image-wrapper">
           <img src="img/foto2.jpg" alt="Iphone 17">
